@@ -86,7 +86,7 @@
           e) Logistic REgression
           f) Bert Classifier
     
-   6. Training and testing on the dataset showed __Bert Classifier__ has the best testing accuracy __60.17%__ when trained on the combination of __Title + Selftext + Permalink__ as feature.
+   6. Training and testing on the dataset showed __Bert Classifier__ has the best testing accuracy __60.79%__ when trained on the combination of __Title + Selftext + Permalink__ as feature.
    
    7. The best model is saved and is deployed in the Web App for the prediction of the flair from the URL of the post.
    
