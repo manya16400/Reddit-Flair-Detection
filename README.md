@@ -46,7 +46,7 @@
   comments | comments of the post (LIMIT 10)
   
   Among ~41k samples from the scraped data, after applying preprocessing steps to the dataset we are left with ~30k samples.
-  Splitting into train and test (70% and 30%)
+  Splitting into train and test (70% and 20%)
   Description |Samples
   --------|--------
   Train | ~24000
@@ -72,11 +72,10 @@
    3.Splitting of data. <br/>
    4. We have considered five types of features as input- <br/>
    
-          a) Title<br/>
-          b) > Comments<br/>
-          c) Title and Selftext<br/>
-          d) Title, Comments and Selftext<br/>
-          e) Title, Comments, Selftext and Permalink<br/>
+          a) Title
+          b) > Comments
+          c) Title and Selftext
+          e) Title, Selftext and Permalink
           
    5. The following algorithms are applied on the dataset- <br/>
           
@@ -87,7 +86,7 @@
           e) Logistic REgression
           f) Bert Classifier
     
-   6. Training and testing on the dataset showed __Bert Classifier__ has the best testing accuracy __60.17%__ when trained on the combination of __Title + Comments + Selftext + Permalink s feature.
+   6. Training and testing on the dataset showed __Bert Classifier__ has the best testing accuracy __60.17%__ when trained on the combination of __Title + Selftext + Permalink__ as feature.
    
    7. The best model is saved and is deployed in the Web App for the prediction of the flair from the URL of the post.
    
@@ -95,15 +94,14 @@
    
    FEATURE | NB CLASSIFIER | LINEAR SVM | LOGISTIC REGRESSION |RANDOM FOREST | MLP CLASSIFIER
    -------|-------------|----------|-------------------|-------------|---------------
-   __Title__|50.36|52.73|43.06|__54.74__|46.39
-   __Comments__|32.42|__37.75__|34.27|36.91|32.84
-   __Title + Selftext__|52.45|54.76|43.97|__55.36__|46.95
-   __Title + Selftext + Comments__|48.99|54.43|45.92|__55.31__|46.13
-   __Title + Selftext + Comments + Permalink__|49.32|55.12|50.20|__55.36__|48.30
+   __Title__|50.367707|52.733737|43.062591|__54.747507__|44.696845
+   __Comments__|32.423598|__37.653211__|34.270305|36.917797|33.453178
+   __Title + Selftext__|52.459552|54.763850|43.977774|__55.368524__|47.409707
+   __Title + Selftext + Permalink__|51.903905|54.894590|50.351364|__54.633109__|46.690635
    
    FEATURE | BERT
    ---------|----
-   __Title__|58.32
-   __Title + Selftext + Comments + Permalink__ |__60.17__
+   __Title__|58.326523
+   __Title + Selftext + Permalink__ |__60.794247__
    
    ### Intuition behind combining feature
