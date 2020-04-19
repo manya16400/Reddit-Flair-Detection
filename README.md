@@ -13,7 +13,7 @@
   This repository illustrates the process of scraping reddit posts from the subreddit [r/india](https://www.reddit.com/r/india),    building a classifier to classify the posts into 8 different flairs and deploying the best model as a web application.
 
 ## Installation
-  Along with Python 3, this project requires following libraries (a few others which are mentioned in later)  :
+  Along with Python 3, this project requires following libraries (a few others which are mentioned in later section)  :
   * sklearn
   * Pytorch
   * pandas
@@ -29,7 +29,7 @@
   (You need a reddit account)
   We have used [Pushshift](https://pushshift.io/) to scrape the data from the subreddit. Unfortunately, it does not allow to extract their comments. To extract this information we use[PRAW](https://praw.readthedocs.io/en/latest/tutorials/comments.html) for this task.
   
-  The featres we will use for this are-
+  The features we will use for this are-
   Feature Name | Description
   -------------|-------------
   id | id of the post
@@ -73,7 +73,7 @@
    4. We have considered five types of features as input- <br/>
    
           a) Title
-          b) > Comments
+          b) Comments
           c) Title and Selftext
           e) Title, Selftext and Permalink
           
@@ -90,7 +90,7 @@
    
    7. The best model is saved and is deployed in the Web App for the prediction of the flair from the URL of the post.
    
-   ## RESULTS
+   ### RESULTS
    
    FEATURE | NB CLASSIFIER | LINEAR SVM | LOGISTIC REGRESSION |RANDOM FOREST | MLP CLASSIFIER
    -------|-------------|----------|-------------------|-------------|---------------
@@ -104,4 +104,8 @@
    __Title__|58.326523
    __Title + Selftext + Permalink__ |__60.794247__
    
-   ### Intuition behind combining feature
+   As Comments as a feature gave less accuracy, we do not combine comments with other features.
+   
+## References
+
+   
