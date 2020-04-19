@@ -2,11 +2,11 @@
   A Reddit Flair Detector web application to detect flairs of India subreddit posts using Machine Learning algorithms and NLP.
 
 ## Table of Contents-
-1. [About](##About)
-2. [Installation](##Installation)
-3. [Data](##Data)
-4. [Flair Classifier](##Flair Classifier)
-5. [Deploying a Web app](/web_app/)
+1. [About](#About)
+2. [Installation](#Installation)
+3. [Data](#Data)
+4. [Flair Classifier](#Flair_Classifier)
+5. [Deploying a Web app](#Deploying_a_Web_app)
 6. [References](#References)
       
 ## About
