@@ -7,7 +7,7 @@
 3. [Data](##Data)
 4. [Flair Classifier](##Flair Classifier)
 5. [Deploying a Web app](/web_app/)
-6. [References](##References)
+6. [References](#References)
       
 ## About
   This repository illustrates the process of scraping reddit posts from the subreddit [r/india](https://www.reddit.com/r/india),    building a classifier to classify the posts into 8 different flairs and deploying the best model as a web application.
