@@ -2,12 +2,12 @@
   A Reddit Flair Detector web application to detect flairs of India subreddit posts using Machine Learning algorithms and NLP.
 
 ## Table of Contents-
-1. [About](https://github.com/manya16400/Reddit-Flair-Detection/edit/master/README.md/About/)
-2. [Installation](/installation/)
-3. [Data](/data/)
-4. [Flair Classifier](/flair_classifier/)
+1. [About](##About)
+2. [Installation](##Installation)
+3. [Data](##Data)
+4. [Flair Classifier](##Flair Classifier)
 5. [Deploying a Web app](/web_app/)
-6. [References](/referneces/)
+6. [References](##References)
       
 ## About
   This repository illustrates the process of scraping reddit posts from the subreddit [r/india](https://www.reddit.com/r/india),    building a classifier to classify the posts into 8 different flairs and deploying the best model as a web application.
@@ -64,7 +64,7 @@
   7.|Business/Finance | 1080
   8.|CAA-NRC | 1070
   
-## Flair Classification
+## Flair Classifier
   
   ### Approach:<br/>
    1. Data is collected. <br/>
