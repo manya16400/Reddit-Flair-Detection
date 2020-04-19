@@ -108,4 +108,8 @@
    
 ## References
 
-   
+   1. <https://towardsdatascience.com/how-to-easily-deploy-machine-learning-models-using-flask-b95af8fe34d4>
+   2. <https://medium.com/the-andela-way/deploying-a-python-flask-app-to-heroku-41250bda27d0>
+   3. <https://praw.readthedocs.io/en/latest/tutorials/comments.html>
+   4. <https://medium.com/@RareLoot/using-pushshifts-api-to-extract-reddit-submissions-fb517b286563>
+   5. <https://towardsdatascience.com/nlp-text-preprocessing-a-practical-guide-and-template-d80874676e79>
