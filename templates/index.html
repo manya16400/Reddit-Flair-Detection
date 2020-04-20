@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Flair Detector</title>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+	<div class="bg-contact2" >
+		<div class="container-contact2">
+			<div class="wrap-contact2">
+				<form class="contact2-form validate-form" action="{{url_for('predict')}}" method="POST">
+					<span class="contact2-form-title">
+						Reddit Flair Detection
+					</span>
+					
+					<div class="wrap-input2 validate-input" data-validate="URL is required">
+						<input class="input2" type="text" name="link" id="link">
+						<span class="focus-input2" data-placeholder="Enter URL for the post"></span>
+					</div>
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+							<button class="contact2-form-btn" type="Submit">
+								Detect
+							</button>
+						</div>
+					</div>
+					<br>
+					<br>
+					<br>
+					<div class="predict_text">
+						PREDICTED- {{prediction}} 
+						<br>
+						<br>
+						TRUE- {{prediction1}}
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
