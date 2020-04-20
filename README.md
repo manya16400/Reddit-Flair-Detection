@@ -1,12 +1,13 @@
 # Reddit-Flair-Detection
-  A Reddit Flair Detector web application to detect flairs of India subreddit posts using Machine Learning algorithms and NLP.
+  A Reddit Flair Detector web application to detect flairs of India subreddit posts using Machine Learning and NLP.
+  The entire code has been developed using Python programming language, utilizing it's powerful text processing and machine learning modules. The application has been developed using Flask web framework and hosted on Heroku web server. The app can be used here [Reddit Flair Detector](https://reddit-india-flair-detector.herokuapp.com/)
 
 ## Table of Contents-
 1. [About](#About)
 2. [Installation](#Installation)
 3. [Data](#Data)
-4. [Flair Classifier](#Flair_Classifier)
-5. [Deploying a Web app](#Deploying_a_Web_app)
+4. [Flair Classifier](#Flair Classifier)
+5. [Deploying a Web app](#Deploying a Web app)
 6. [References](#References)
       
 ## About
@@ -21,6 +22,9 @@
   * matplotlib
   * nltk
   * praw
+  * bs4
+  * Flask
+  * gunicorn
   
 ## Data
   To download the dataset
@@ -86,11 +90,7 @@
           e) Logistic REgression
           f) Bert Classifier
     
-   6. Training and testing on the dataset showed __Bert Classifier__ has the best testing accuracy __60.79%__ when trained on the combination of __Title + Selftext + Permalink__ as feature.
-   
-   7. The best model is saved and is deployed in the Web App for the prediction of the flair from the URL of the post.
-   
-   ### RESULTS
+   ### ResultS
    
    FEATURE | NB CLASSIFIER | LINEAR SVM | LOGISTIC REGRESSION |RANDOM FOREST | MLP CLASSIFIER
    -------|-------------|----------|-------------------|-------------|---------------
@@ -102,9 +102,15 @@
    FEATURE | BERT
    ---------|----
    __Title__|58.326523
-   __Title + Selftext + Permalink__ |__60.794247__
+   __Title + Selftext + Permalink__ |__62.510214__
    
    As Comments as a feature gave less accuracy, we do not combine comments with other features.
+   
+   6. _Inferences_- Training and testing on the dataset showed __Bert Classifier__ has the best testing accuracy __62.51%__ when trained on the combination of __Title + Selftext + Permalink__ as feature.
+   The tests shows that the combined features Title + Selftext + Permalink shows the best accuracy while Comments shows the worst accuracy. As machine learning models tries to detect specific words to identify the sentiment, hence title as a feature performs better than comments due to the fact that the title consists of all the keywords (selftext and permalink further contributes because it consists the description of the post).
+   
+## Deploying a Web app
+  As per the above results, Bert came out to be the best model and Random Forest to be the second best. But due to large size of bert and random forest we can not deploy it in Heroku web service (due to its limited slug size). So we consider the next best model __Linear SVM with accuracy of ~55%__ for deploying to Heroku.
    
 ## References
 
