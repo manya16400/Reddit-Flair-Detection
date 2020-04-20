@@ -99,7 +99,7 @@
    
    FEATURE | BERT
    ---------|----
-   __Title__|58.326523
+   __Title__|57.95
    __Title + Selftext + Permalink__ |__62.510214__
    
    As Comments as a feature gave less accuracy, we do not combine comments with other features.
