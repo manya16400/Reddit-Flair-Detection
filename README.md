@@ -6,8 +6,8 @@
 1. [About](#About)
 2. [Installation](#Installation)
 3. [Data](#Data)
-4. [Flair Classifier](#Flair Classifier)
-5. [Deploying a Web app](#Deploying a Web app)
+4. [Flair Classifier](#Flair-Classifier)
+5. [Deploying a Web app](#Deploying-a-Web-app)
 6. [References](#References)
       
 ## About
