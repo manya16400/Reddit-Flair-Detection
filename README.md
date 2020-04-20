@@ -70,7 +70,7 @@
   
 ## Flair Classifier
   
-  ### Approach:<br/>
+  #### Approach:<br/>
   1. The __title__, __comments__, __selftext__, __permalink__ are cleaned by removing bad symbols and stopwords using nltk. <br/>
   2. We have considered four types of features as input- <br/>
    
@@ -88,7 +88,7 @@
           e) Logistic REgression
           f) Bert Classifier
     
-   ### Results
+   #### Results :
    
    FEATURE | NB CLASSIFIER | LINEAR SVM | LOGISTIC REGRESSION |RANDOM FOREST | MLP CLASSIFIER
    -------|-------------|----------|-------------------|-------------|---------------
