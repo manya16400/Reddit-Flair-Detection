@@ -50,7 +50,7 @@
   comments | comments of the post (LIMIT 10)
   
   Among ~41k samples from the scraped data, after applying preprocessing steps to the dataset we are left with ~30k samples.
-  Splitting into train and test (70% and 20%)
+  Splitting into train and test (70% and 20%)-
   Description |Samples
   --------|--------
   Train | ~24000
@@ -71,17 +71,15 @@
 ## Flair Classifier
   
   ### Approach:<br/>
-   1. Data is collected. <br/>
-   2. The __title__, __comments__, __selftext__, __permalink__ are cleaned by removing bad symbols and stopwords using nltk. <br/>
-   3.Splitting of data. <br/>
-   4. We have considered five types of features as input- <br/>
+  1. The __title__, __comments__, __selftext__, __permalink__ are cleaned by removing bad symbols and stopwords using nltk. <br/>
+  2. We have considered four types of features as input- <br/>
    
           a) Title
           b) Comments
           c) Title and Selftext
           e) Title, Selftext and Permalink
           
-   5. The following algorithms are applied on the dataset- <br/>
+  3. The following algorithms are applied on the dataset- <br/>
           
           a) Naive-Bayes Classifier
           b) Random Forest
@@ -90,7 +88,7 @@
           e) Logistic REgression
           f) Bert Classifier
     
-   ### ResultS
+   ### Results
    
    FEATURE | NB CLASSIFIER | LINEAR SVM | LOGISTIC REGRESSION |RANDOM FOREST | MLP CLASSIFIER
    -------|-------------|----------|-------------------|-------------|---------------
@@ -106,7 +104,7 @@
    
    As Comments as a feature gave less accuracy, we do not combine comments with other features.
    
-   6. _Inferences_- Training and testing on the dataset showed __Bert Classifier__ has the best testing accuracy __62.51%__ when trained on the combination of __Title + Selftext + Permalink__ as feature.
+   4. _Inferences_- Training and testing on the dataset showed __Bert Classifier__ has the best testing accuracy __62.51%__ when trained on the combination of __Title + Selftext + Permalink__ as feature.<br>
    The tests shows that the combined features Title + Selftext + Permalink shows the best accuracy while Comments shows the worst accuracy. As machine learning models tries to detect specific words to identify the sentiment, hence title as a feature performs better than comments due to the fact that the title consists of all the keywords (selftext and permalink further contributes because it consists the description of the post).
    
 ## Deploying a Web app
