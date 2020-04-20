@@ -342,7 +342,7 @@ def res():
         value.append(val)
 
     dic={"Key":key,"Value":value}
-    print(dic)
+   
     return jsonify(dic)
 
 
