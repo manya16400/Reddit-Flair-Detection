@@ -112,7 +112,7 @@
   As per the above results, Bert came out to be the best model and Random Forest to be the second best. But due to large size of bert and random forest we can not deploy it to Heroku web service (due to its limited slug size). So we consider the next best model __Linear SVM with accuracy of ~55% considering Title + Selftext + Permalink as feature__ for deploying to Heroku.
     
    Web screenshot
-   ![Web app](https://github.com/manya16400/Reddit-Flair-Detection/blob/master/Web%20screenshots/2.png)
+   ![](https://github.com/manya16400/Reddit-Flair-Detection/blob/master/Web%20screenshots/2.png)
    Web endpoint screenshot (/automated_testing)
      ![](https://github.com/manya16400/Reddit-Flair-Detection/blob/master/Web%20screenshots/5.png)
 ## References
