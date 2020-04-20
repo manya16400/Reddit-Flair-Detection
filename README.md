@@ -31,7 +31,7 @@
   <https://drive.google.com/open?id=1V2DaOj97SjZMTQa_MeJIeIo196SXYjFX>
   
   (You need a reddit account) <br>
-  We have used [Pushshift](https://pushshift.io/) to scrape the data from the subreddit. Unfortunately, it does not allow to extract the comments of the post. To extract this information we use [PRAW](https://praw.readthedocs.io/en/latest/tutorials/comments.html).
+  I have used [Pushshift](https://pushshift.io/) to scrape the data from the subreddit. Unfortunately, it does not allow to extract the comments of the post. To extract this information I used [PRAW](https://praw.readthedocs.io/en/latest/tutorials/comments.html).
   
   The features we will use for this are-
   Feature Name | Description
@@ -50,13 +50,13 @@
   comments | comments of the post (LIMIT 10)
   
   Among ~41k samples from the scraped data, after applying preprocessing steps to the dataset we are left with ~30k samples.
-  Splitting into train and test (70% and 20%)-
+  Splitting into train and test (80% and 20%)-
   Description |Samples
   --------|--------
   Train | ~24000
   Test | ~6000
   
-  We are considering 8 flairs-
+  Out of 40 flairs, we are considering __8 flairs__ because rest are less significant as they have <1000 entries.
   Label|Flair | Samples
   ---|---|---------
   1.|Politics|8425
@@ -109,7 +109,7 @@
    the short description of the post).
    
 ## Deploying a Web app
-  As per the above results, Bert came out to be the best model and Random Forest to be the second best. But due to large size of bert and random forest we can not deploy it in Heroku web service (due to its limited slug size). So we consider the next best model __Linear SVM with accuracy of ~55%__ for deploying to Heroku.
+  As per the above results, Bert came out to be the best model and Random Forest to be the second best. But due to large size of bert and random forest we can not deploy it to Heroku web service (due to its limited slug size). So we consider the next best model __Linear SVM with accuracy of ~55%__ for deploying to Heroku.
    
 ## References
 
