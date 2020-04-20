@@ -11,7 +11,7 @@
 6. [References](#References)
       
 ## About
-  This repository illustrates the process of scraping reddit posts from the subreddit [r/india](https://www.reddit.com/r/india),    building a classifier to classify the posts into 8 different flairs and deploying the best model as a web application.
+  This repository illustrates the process of scraping reddit posts from the subreddit [r/india](https://www.reddit.com/r/india), text preprocessing/cleaning of data, building a classifier to classify the posts into 8 different flairs and deploying the best model as a web application.
 
 ## Installation
   Along with Python 3, this project requires following libraries (a few others which are mentioned in later section)  :
@@ -30,8 +30,8 @@
   To download the dataset
   <https://drive.google.com/open?id=1V2DaOj97SjZMTQa_MeJIeIo196SXYjFX>
   
-  (You need a reddit account)
-  We have used [Pushshift](https://pushshift.io/) to scrape the data from the subreddit. Unfortunately, it does not allow to extract their comments. To extract this information we use[PRAW](https://praw.readthedocs.io/en/latest/tutorials/comments.html) for this task.
+  (You need a reddit account) <br>
+  We have used [Pushshift](https://pushshift.io/) to scrape the data from the subreddit. Unfortunately, it does not allow to extract the comments of the post. To extract this information we use [PRAW](https://praw.readthedocs.io/en/latest/tutorials/comments.html).
   
   The features we will use for this are-
   Feature Name | Description
