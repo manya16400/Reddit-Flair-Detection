@@ -70,7 +70,7 @@
   
 ## Flair Classifier
   
-  #### Approach:<br/>
+  #### Approa ch:<br/>
   1. The __title__, __comments__, __selftext__, __permalink__ are cleaned by removing bad symbols and stopwords using nltk. <br/>
   2. We have considered four types of features as input- <br/>
    
@@ -79,6 +79,9 @@
           c) Title and Selftext
           e) Title, Selftext and Permalink
           
+  3. We will apply sklearn feature_extraction libraries __CountVectorizer() and TfidfTransformer()__ (term frequency-inverse document frequency formula) to our features.
+  CountVectorizer is used to convert text to word count vectors whereas TfidTransformer is used to convert text to word frequency vecotrs, it defines the importance of a keyword or phrase within a document or a web page. 
+          -
   3. The following algorithms are applied on the dataset- <br/>
           
           a) Naive-Bayes Classifier
