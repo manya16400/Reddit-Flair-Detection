@@ -107,7 +107,7 @@
    
    As Comments as a feature gave less accuracy, we do not combine comments with other features.
    
-   4. _Inferences_- Training and testing on the dataset showed __Bert Classifier__ has the best testing accuracy __62.51%__ when trained on the combination of __Title + Selftext + Permalink__ as feature.<br>
+   5. _Inferences_- Training and testing on the dataset showed __Bert Classifier__ has the best testing accuracy __62.51%__ when trained on the combination of __Title + Selftext + Permalink__ as feature.<br>
    The tests shows that the combined features Title + Selftext + Permalink shows the best accuracy while Comments shows the worst accuracy. Machine learning models tries to detect specific words to identify the sentiment, hence title as a feature performs better than comments due to the fact that the title consists of all the keywords (selftext and permalink further contributes as they consist
    the short description of the post).
    
