@@ -1,6 +1,7 @@
 # Reddit-Flair-Detection
   A Reddit Flair Detector web application to detect flairs of India subreddit posts using Machine Learning and NLP.<br>
-  The entire code has been developed using Python programming language, utilizing its powerful text processing and machine learning modules. The application has been developed using Flask web framework and hosted on Heroku web server. The app can be used here [Reddit Flair Detection](https://flair-detector-india.herokuapp.com/).
+  The entire code has been developed using Python programming language, utilizing its powerful text processing and machine learning modules. The application has been developed using Flask web framework and hosted on Heroku web server.<br>
+  The web app can be used here [Reddit Flair Detection](https://flair-detector-india.herokuapp.com/) and the endpoint can be used [here](https://flair-detector-india.herokuapp.com/automated_testing).
 
 ## Table of Contents-
 1. [About](#About)
@@ -116,7 +117,8 @@
     
    Web screenshot
    ![](https://github.com/manya16400/Reddit-Flair-Detection/blob/master/Web%20screenshots/2.png)
-   Web endpoint screenshot (/automated_testing)
+   
+   A web endpoint __(/automated_testing)__ is also created in which you can upload a .txt file which contains urls of the reddit post in eachh line and the output is a json format where __key__ is the url link and __value__ is the predicted flair.
      ![](https://github.com/manya16400/Reddit-Flair-Detection/blob/master/Web%20screenshots/5.png)
 ## References
 
