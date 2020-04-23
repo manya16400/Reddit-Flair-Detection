@@ -29,16 +29,36 @@
 							</button>
 						</div>
 					</div>
-					<br>
-					<br>
-					<br>
+					
 					<div class="predict_text">
 						PREDICTED- {{prediction}} 
 						<br>
-						<br>
+						
 						TRUE- {{prediction1}}
 					</div>
 					
+				</form>
+				<br>
+				<br>
+				<br>
+				<form class="contact2-form validate-form" action="{{url_for('automated_testing')}}" method="POST" enctype="multipart/form-data">
+					
+					<h4 align="center">Please select a .txt file you would like to upload.</h4>
+					<br>
+					<div class="wrap-input2 validate-input">
+						<input class="input2" type="file" name="upload_file" id="upload_file">
+						
+					</div>
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+							<button class="contact2-form-btn" type="Submit">
+								Submit
+							</button>
+						</div>
+					</div>
+				
 				</form>
 			</div>
 		</div>
