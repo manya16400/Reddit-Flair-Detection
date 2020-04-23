@@ -22,15 +22,14 @@ import warnings
 from bs4 import BeautifulSoup
 warnings.filterwarnings('ignore')
 
-reddit=praw.Reddit(client_id='oCmAKw3zJDthfw',
-client_secret='UcvYE3JbhkQNwMoB1V_j1tMNiu0',
+reddit=praw.Reddit(client_id='XXXX',
+client_secret='XXXX',
 user_agent='Flair Detection',
-password='mmaannuu')
-
-#
+password='XXXX')
 
 
 
+#flask app
 app=Flask(__name__)
 
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
@@ -257,6 +256,7 @@ def predict():
     if(flair=="nan" or flair=="NaN" or flair=="[removed]" or flair=='[deleted]'):
         flair=" "
 
+    #preprocessing and cleaning of data
     title_p=text_preprocessing(title)
     selftext_p=text_preprocessing(selftext)
     permalink_p=text_preprocessing(permalink)
@@ -305,9 +305,6 @@ def predict_text(url,new_model):
     
 
     X=title_p+selftext_p+permalink_p
-
-    
-
     prediction = new_model.predict(X.split(" "))
 
     output = prediction[0]
@@ -316,38 +313,29 @@ def predict_text(url,new_model):
 
 #endpoint
 
-@app.route('/automated_testing')
+@app.route('/automated_testing',methods=['POST'])
 def automated_testing():
-	return flask.render_template('automated_testing.html')
-	test()
+	try:
+		data = request.files['upload_file']
+		links=data.readlines()
 
-@app.route('/res',methods=['POST'])
-def res():
+		key=[]
+		value=[]
 
-    
+		loaded_model = joblib.load('model.sav')
 
-    data = request.files['myfile']
+		for i in range(0,len(links)):
+			a=links[i].decode("utf-8")
+			val=predict_text(a,loaded_model)
+			key.append(a)
+			value.append(val)
 
-    links=data.readlines()
+		dic={"Key":key,"Value":value}
+		print(dic)
+		return jsonify(dic)
 
-    key=[]
-    value=[]
-
-    loaded_model = joblib.load('model.sav')
-
-    for i in range(0,len(links)):
-        a=links[i].decode("utf-8")
-        val=predict_text(a,loaded_model)
-        key.append(a)
-        value.append(val)
-
-    dic={"Key":key,"Value":value}
-   
-    return jsonify(dic)
-
-
-    
-
+	except:
+		return 'Please upload correct file format.'
 
 if __name__ == "__main__":
     
